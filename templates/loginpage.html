@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% extends "basic.html"%}
+    <meta charset="UTF-8">
+    <title>login</title>
+	<style>
+		p{
+		color:red;
+		}
+	</style>
+</head>
+<body>
+{% block logo%}Let's Login.{% endblock%}
+
+{% block body%}
+	<div id="fh5co-login" class="fh5co-section animate-box">
+		<div class="container">
+			<div class="row animate-box">
+				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+					<h2 style="color:white;">Welcome To The RUTU-CAFE.</h2>
+					<p></p>
+					<p><a class="btn btn-primary btn-outline">Login</a></p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-4 col-md-push-4 col-sm-4 col-sm-push-4">
+					<form action="" method="POST">
+
+						<div class="row form-group">
+                            {% csrf_token%}
+							<div class="col-md-12">
+								<label>User Name</label>
+								<input type="text" placeholder="Enter Your Username" class="form-control" name="username">
+							</div>
+						</div>
+						<div class="row form-group">
+							<div class="col-md-12">
+								<label>Password</label>
+								<input type="password" placeholder="Password" class="form-control" name="password">
+							</div>
+						</div>
+                        <center>
+							{% for msg in messages%}
+							<p>{{msg}}</p>
+							{%endfor%}
+						<div class="row form-group">
+							<div class="col-md-12">
+								<input type="submit" class="btn btn-primary btn-outline btn-lg" value="Login">
+								<a href="/signup"><input type="button" class="btn btn-primary btn-outline btn-lg" value="Signup"></a>
+							</div>
+						</div>
+                        </center>
+					</form>
+				</div>
+			</div>
+
+		</div>
+	</div>
+{% endblock%}
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% extends "basic.html"%}
+    <meta charset="UTF-8">
+    <title>contact</title>
+</head>
+<body>
+{% block logo%}<h1>Get <em>in</em> Touch</h1>
+{%for msg in messages%}<h2><br>{{msg}}</h2>{%endfor%}
+{% endblock%}
+{% block body%}
+
+	<div id="fh5co-Sunilcontact" class="fh5co-section animate-box">
+		<div class="container">
+			<div class="row animate-box">
+				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+					<h2 style="color:white;">Don't be shy, let's chat.</h2>
+					<p> Service, in short, is not what you do, but who you are. It's a way of living that you need to bring to everything you do if you're to bring it to your customer interactions!</p>
+					<p><a href="mailto:info@yourdomainname.com" class="btn btn-primary btn-outline">Contact Us</a></p>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-4 col-md-push-4 col-sm-4 col-sm-push-4">
+					<form method="post" id="form-wrap">
+						{%csrf_token%}
+						<div class="row form-group">
+							<div class="col-md-12">
+								<label>Your Name</label>
+								<input type="text" class="form-control" name="name">
+							</div>
+						</div>
+						<div class="row form-group">
+							<div class="col-md-12">
+								<label>Your Email</label>
+								<input type="text" class="form-control" name="email">
+							</div>
+						</div>
+						<div class="row form-group">
+							<div class="col-md-12">
+								<label>Your Message</label>
+								<textarea name="msg" id="message" cols="30" rows="10" class="form-control"></textarea>
+							</div>
+						</div>
+						<div class="row form-group">
+							<div class="col-md-12">
+								<input type="submit" class="btn btn-primary btn-outline btn-lg" value="Submit Form">
+							</div>
+						</div>
+
+					</form>
+				</div>
+			</div>
+
+		</div>
+	</div>
+{% endblock%}
+</body>
+</html>

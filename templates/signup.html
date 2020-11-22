@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% extends "basic.html"%}
+    <meta charset="UTF-8">
+    <title>signup</title>
+</head>
+<body>
+    {% block logo%}Register Below{% endblock%}
+    {% block body%}
+	<div id="fh5co-signup" class="fh5co-section animate-box">
+		<div class="container">
+			<div class="row animate-box">
+				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+					<h2 style="color:white;">Welcome To The T-CAFE.</h2>
+					<p></p>
+					<p><a class="btn btn-primary btn-outline">Register Here...!</a></p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-4 col-md-push-4 col-sm-4 col-sm-push-4">
+					<form action="" method="POST" id="form-wrap">
+						{% csrf_token%}
+						<div class="row form-group">
+							<div class="col-md-12">
+								<label>{{form.username.label}}</label>
+								{{form.username}}
+							</div>
+						</div>
+						<div class="row form-group">
+							<div class="col-md-12">
+								<label>{{form.email.label}}</label>
+								{{form.email}}
+							</div>
+						</div>
+						<div class="row form-group">
+							<div class="col-md-12">
+								<label>{{form.password1.label}}</label>
+								{{form.password1}}
+							</div>
+						</div>
+						<div class="row form-group">
+							<div class="col-md-12">
+								<label>{{form.password2.label}}</label>
+								{{form.password2}}
+							</div>
+						</div>
+                        <center>
+						<div class="row form-group">
+							<div class="col-md-12">
+                                <input type="submit" class="btn btn-primary btn-outline btn-lg" value="Register">
+							</div>
+						</div>
+                        </center>
+					</form>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+    {% endblock%}
+
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+{% extends "basic.html"%}
+{% load static%}
+<html lang="en">
+{%block logout%}<li><a href="{% url 'logout'%}">LOGOUT</a></li>{%endblock%}
+	<head>
+    <meta charset="UTF-8">
+    <title>menu</title>
+		</head>
+			<body>
+			{% block logo%}<h1>See <em>Our</em> Menu</h1>
+			<h1>{{user}}</h1>
+			{% endblock%}
+			{% block body %}
+
+	<div id="fh5co-featured-menu" class="fh5co-section">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 fh5co-heading animate-box">
+					<h2>Today's Special....!</h2>
+					<div class="row">
+						<div class="col-md-6">
+							<p>The T-CAFE is the best Coffee Shop in this region. We are always for you. Wan't to try something new visit our coffee shop.</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-3 col-sm-6 col-xs-6 col-xxs-12 fh5co-item-wrap">
+					<div class="fh5co-item animate-box">
+						<img src="{% static 'images/blue_tokai.jpg'%}" class="img-responsive" alt="Free Restaurant Bootstrap Website Template by FreeHTML5.co">
+						<h3>Blue Tokai</h3>
+						<span class="fh5co-price">Rs.80<sup>.50</sup></span>
+						<p>The name Blue Tokai comes from an ancient word for the tail of a peacock –tokai – and this tail makes up the logo of the Delhi based artisanal coffee brand Blue Tokai.</p>
+					</div>
+					<div class="fh5co-item animate-box">
+						<img src="{% static 'images/davidoff.jpg'%}" class="img-responsive" alt="Free Restaurant Bootstrap Website Template by FreeHTML5.co">
+						<h3>Davidoff</h3>
+						<span class="fh5co-price">Rs.40<sup>.50</sup></span>
+						<p>Davidoff is one of the luxury coffee brands that is available in India. This coffee is made using 100% Arabica beans which are considered the best coffee beans in the world.</p>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-6 col-xs-6 col-xxs-12 fh5co-item-wrap">
+					<div class="fh5co-item margin_top animate-box">
+						<img src="{% static 'images/starbuks.jpg'%}" class="img-responsive" alt="Free Restaurant Bootstrap Website Template by FreeHTML5.co">
+						<h3> Starbucks</h3>
+						<span class="fh5co-price">Rs.99<sup>.00</sup></span>
+						<p>They’ve been serving some of the best cups of coffee since 1971. For them, it always has been and will always be about quality. They’re passionate about ethical sourcing of coffee and use only. </p>
+					</div>
+					<div class="fh5co-item animate-box">
+						<img src="{% static 'images/coffeeco.png'%}" class="img-responsive" alt="Free Restaurant Bootstrap Website Template by FreeHTML5.co">
+						<h3>The Coffee Co.</h3>
+						<span class="fh5co-price">Rs.50<sup>.50</sup></span>
+						<p>They started in 2013 and had modest beginnings. They began with an initial offering of just two blends, and today, have about six blends that include medium and light bodied coffee..</p>
+					</div>
+				</div>
+				<div class="clearfix visible-sm-block visible-xs-block"></div>
+				<div class="col-md-3 col-sm-6 col-xs-6 col-xxs-12 fh5co-item-wrap">
+					<div class="fh5co-item animate-box">
+						<img src="{% static 'images/nescafe.jpg'%}" class="img-responsive" alt="Free Restaurant Bootstrap Website Template by FreeHTML5.co">
+						<h3> Nescafe</h3>
+						<span class="fh5co-price">Rs.50<sup>.99</sup></span>
+						<p>Nescafe is definitely one of the most FAQbrands of coffee in India. It was launched in 1938 in Switzerland and has been popular across various countries.</p>
+					</div>
+					<div class="fh5co-item animate-box">
+						<img src="{% static 'images/bru.png'%}" class="img-responsive" alt="Free Restaurant Bootstrap Website Template by FreeHTML5.co">
+						<h3>Bru</h3>
+						<span class="fh5co-price">Rs.70<sup>.50</sup></span>
+						<p>Bru is known as one of the favorite coffee brands in India, which was introduced by Hindustan Unilever Limited in 1969. It holds about 49.6% of the market share in India.</p>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-6 col-xs-6 col-xxs-12 fh5co-item-wrap">
+					<div class="fh5co-item margin_top animate-box">
+						<img src="{% static 'images/fly.jpg'%}" class="img-responsive" alt="Free Restaurant Bootstrap Website Template by FreeHTML5.co">
+						<h3>The Flying Squirrel</h3>
+						<span class="fh5co-price">Rs.42<sup>.50</sup></span>
+						<p>The Flying Squirrel started in 2013 and is today one of the leading online coffee brands in India. Most of its coffee is grown in Coorg where the main estate (the 100-year-old Nellikad Estate) is located.</p>
+					</div>
+					<div class="fh5co-item animate-box">
+						<img src="{% static 'images/americano.jpg'%}" class="img-responsive" alt="Free Restaurant Bootstrap Website Template by FreeHTML5.co">
+						<h3>Americano</h3>
+						<span class="fh5co-price">Rs.99<sup>.99</sup></span>
+						<p>Americanos are popular breakfast drinks and thought to have originated during World War II. Soldiers would add water to their coffee to extend their rations farther.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+			{% endblock %}
+		</body>
+</html>
